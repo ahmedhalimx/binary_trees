@@ -19,13 +19,13 @@ size_t alx_checker_sucks(const binary_tree_t *tree)
 	if (tree->right)
 	{
 		++r_height;
-		r_height += binary_tree_height(tree->right);
+		r_height += alx_checker_sucks(tree->right);
 	}
 
 	if (tree->left)
 	{
 		++l_height;
-		l_height += binary_tree_height(tree->left);
+		l_height += alx_checker_sucks(tree->left);
 	}
 
 	if (r_height >= l_height)
@@ -50,8 +50,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree->left && tree->right)
 	{
-		int r_height = binary_tree_height(tree->right);
-		int l_height = binary_tree_height(tree->left);
+		int r_height = alx_checker_sucks(tree->right);
+		int l_height = alx_checker_sucks(tree->left);
 
 		if (r_height != l_height)
 			return (0);
