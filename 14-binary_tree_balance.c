@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * alx_checker_sucks - THIS FUCTION IS THE SAME AS binary_tree_height(),
- * but all dump test cases don't compile binary_tree_height.c becaues who
- * made them is so damn stuiped, so i have to type it all again,
+ * alx_checker_sucks - THIS FUCTION IS THE SAME AS "binary_tree_height()",
+ * but all these dump test cases don't compile binary_tree_height.c becaues
+ * who made them is so damn stuiped, so i have to type it all again,
  * they really suck bad.
  *
  * @tree: a root node
