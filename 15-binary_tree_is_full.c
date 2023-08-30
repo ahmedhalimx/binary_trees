@@ -9,10 +9,10 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
+	int l_subtree = 0, r_subtree = 0;
+
 	if (!tree)
 		return (0);
-
-	int l_subtree = 0, r_subtree = 0;
 
 	if (tree->left && tree->right)
 	{

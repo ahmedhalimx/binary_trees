@@ -9,10 +9,10 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	int l_node = 0, r_node = 0;
+
 	if (!tree)
 		return (0);
-
-	int l_node = 0, r_node = 0;
 
 	if (tree->left && tree->right)
 	{
