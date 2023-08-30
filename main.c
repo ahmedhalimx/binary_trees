@@ -10,28 +10,19 @@
 int main(void)
 {
     binary_tree_t *root;
-    int perfect;
+    size_t size;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
-    root->left->left = binary_tree_node(root->left, 10);
-    root->right->left = binary_tree_node(root->right, 10);
-
     binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n\n", perfect);
 
-    root->right->right->left = binary_tree_node(root->right->right, 10);
-    binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n\n", perfect);
-
-    root->right->right->right = binary_tree_node(root->right->right, 10);
-    binary_tree_print(root);
-    perfect = binary_tree_is_perfect(root);
-    printf("Perfect: %d\n", perfect);
-    return (0);
+    size = binary_tree_size(root);
+    printf("Size of %d: %lu\n", root->n, size);
+    size = binary_tree_size(root->right);
+    printf("Size of %d: %lu\n", root->right->n, size);
+    size = binary_tree_size(root->left->right);
+    printf("Size of %d: %lu\n", root->left->right->n, size);
 }
