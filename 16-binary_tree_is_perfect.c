@@ -1,6 +1,40 @@
 #include "binary_trees.h"
 
 /**
+ * alx_checker_sucks - a function that is identical to binary_tree_height,
+ * but all test cases doesn't compile binary_tree_height.c becaues they are
+ * stuipd, so i have to typed it all again, they really suck bad.
+ *
+ * @tree: a root node
+ *
+ * Return: the height of tree
+ */
+size_t alx_checker_sucks(const binary_tree_t *tree)
+{
+	int l_height = 0, r_height = 0;
+
+	if (!tree)
+		return (0);
+
+	if (tree->right)
+	{
+		++r_height;
+		r_height += binary_tree_height(tree->right);
+	}
+
+	if (tree->left)
+	{
+		++l_height;
+		l_height += binary_tree_height(tree->left);
+	}
+
+	if (r_height >= l_height)
+		return (r_height);
+	else
+		return (l_height);
+}
+
+/**
  * binary_tree_is_perfect - Checks if a binary tree is perfect
  *
  * @tree: the root node
