@@ -49,7 +49,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	else if (second->parent == first)
 		return (second->parent);
 	else if (first == second)
-		return (first->parent);
+		return ((binary_tree_t *)first);
 
 	first_depth = alx_checker_sucks(first);
 	second_depth = alx_checker_sucks(second);
